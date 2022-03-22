@@ -2,7 +2,7 @@
   "name": "milestone2",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ElijahSchrock/milestone2/issues"
   },
-  "homepage": "https://github.com/ElijahSchrock/milestone2#readme"
+  "homepage": "https://github.com/ElijahSchrock/milestone2#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
 }
