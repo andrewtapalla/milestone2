@@ -2,9 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({
-      message: 'Yellow world'
+      message: 'Yellow world from server.js'
   });
 });
 
