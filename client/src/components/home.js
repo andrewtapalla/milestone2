@@ -1,6 +1,4 @@
-import WinKey from "./keyboard";
-
- function Home() {
+function Home() {
     return (
         <div className="App">
           <h1>hello world</h1>
