@@ -1,5 +1,3 @@
-import WinKey from "./keyboard";
-
 function Game() {
   return (
     <div className="App">
