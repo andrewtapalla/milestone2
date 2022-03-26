@@ -1,4 +1,4 @@
-const mongoose = requrie("mongoose");
+const mongoose = require("mongoose");
 
 const logoSchema = new mongoose.Schema({
   company: { type: String, required: true },
