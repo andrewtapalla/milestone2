@@ -14,6 +14,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 function App() {
   const [data, setData] = useState(null);
 
+
   useEffect(() => {
     fetch("/api")
       .then(res => res.json())
@@ -39,7 +40,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/game" element={<Game />} />
-          <Route path="/library" element={<Library />} />
+          <Route path="/library" element={<Library data={data} />} />
         </Routes>
       </BrowserRouter>
       <p>{data}</p>

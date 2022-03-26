@@ -1,8 +1,15 @@
-const React = require("react");
+import { useEffect, useState } from "react";
 
-function Library(data) {
+function Library() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("/library")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
   console.log(data);
-  let logosFormatted = data.logos.map((logo) => {
+
+  let logosFormatted = data.adeez.map((logo) => {
     return (
       <div>
         <h3>{logo.company}</h3>
