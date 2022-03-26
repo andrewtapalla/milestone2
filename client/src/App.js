@@ -5,6 +5,12 @@ import Game from "./components/game";
 import Home from "./components/home";
 import Library from "./components/library";
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+
 function App() {
   const [data, setData] = useState(null);
 
@@ -16,6 +22,18 @@ function App() {
 
   return (
     <div className="App">
+      <Nav className="justify-content-center" defaultActiveKey="/home" as="ul">
+        <Nav.Item as="li">
+          <Nav.Link href="/">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link href="/game">Game</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link href="/library">Library</Nav.Link>
+        </Nav.Item>
+      </Nav>
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
