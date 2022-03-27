@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: lightblue;
+}
+body {
+background-color: lightblue;
 }
 
 .nav-item {
@@ -12,10 +16,9 @@
   padding: 5px;
 }
 
-Canvas {
-  background-color: black;
+canvas {
   margin: auto;
-  height: 30em;
+  height: 20em;
 }
 
 input {

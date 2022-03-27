@@ -1,15 +1,18 @@
-import { Canvas } from '@react-three/fiber'
-import { BoxBufferGeometry } from 'three';
-import LogoRen from './logoRen'
+import LogoRender from "./logoRen";
 
 function Game() {
   return (
     <div className="App">
-      <Canvas>
-        <LogoRen />
-      </Canvas>
-      <h1>hello world</h1>
-      <h2>this is game</h2>
+      <div>
+        <LogoRender />
+      </div>
+      <h1>Guess the logo</h1>
+      <div>
+        <h2>3 guess's section</h2>
+      </div>
+      <div>
+        <h2>keyboard section</h2>
+      </div>
     </div>
   );
 }
