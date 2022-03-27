@@ -1,12 +1,13 @@
 const router = require("express").Router();
-const db = require("../models/index");
+const db = require("../models");
 
 //Show
 
-router.get("/library", (req, res) => {
+router.get("/", (req, res) => {
   db.Logo.find()
     .then((logos) => {
-      res.render("library/logo", { logos });
+      console.log(logos);
+      res.json(logos);
     })
     .catch((err) => {
       console.log(err);
