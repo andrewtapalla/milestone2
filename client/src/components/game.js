@@ -3,6 +3,7 @@ import Board from "./board";
 
 function Game() {
   return (
+
     <div className="App">
       <div>
         <LogoRender />
@@ -14,6 +15,7 @@ function Game() {
       <div>
         <h2>keyboard section</h2>
       </div>
+
     </div>
   );
 }

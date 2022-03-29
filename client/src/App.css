@@ -1,15 +1,27 @@
 .App {
   text-align: center;
-  background-color: lightblue;
-}
-body {
-background-color: lightblue;
+  color: white;
+  background-size: cover;
+  background-image: url("../public/images/background.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: auto;
 }
 
-.nav-item {
+.nav-link {
+  text-decoration: none;
   border: black 1px solid;
-  border-radius: 20px;
+  border-radius: 16px;
   text-align: center;
+  color: white !important;
+  border-color: white;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.nav-link:hover {
+  background-color: #dddbdb;
 }
 
 .li {

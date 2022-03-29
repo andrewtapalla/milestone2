@@ -1,6 +1,10 @@
-function Home() {
+
+import Container from 'react-bootstrap/Container'
+
+ function Home() {
+
     return (
-        <div className="App">
+        <div>
           <h1>hello world</h1>
           <h2>this is home</h2>
         </div>

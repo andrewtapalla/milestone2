@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <Container className="background">
       <Nav className="justify-content-center" defaultActiveKey="/home" as="ul">
         <Nav.Item as="li">
           <Nav.Link href="/">Home</Nav.Link>
@@ -43,6 +44,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <p>{data}</p>
+      </Container>
     </div>
   );
 }

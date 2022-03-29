@@ -8,4 +8,6 @@ const logoSchema = new mongoose.Schema({
   hint: { type: String },
 });
 
+
 module.exports = mongoose.model("Logo", logoSchema, "adeez");
+
