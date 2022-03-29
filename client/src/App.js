@@ -43,7 +43,6 @@ function App() {
           <Route path="/library" element={<Library />} />
         </Routes>
       </BrowserRouter>
-      <p>{data}</p>
       </Container>
     </div>
   );

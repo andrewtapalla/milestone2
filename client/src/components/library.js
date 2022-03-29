@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 function Library() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    console.log("hi");
     fetch("/library")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       })
       .catch((err) => {
@@ -17,20 +15,27 @@ function Library() {
 
   let logosFormatted = data.map((logo) => {
     return (
-      <div>
-        <li key={logo.id}>{logo.company}</li>
+      <div key={logo.company}>
+        <li>{logo.company}</li>
       </div>
     );
   });
 
   return (
     <div key={Library}>
-      <h1>hello world</h1>
-      <h2>this is library</h2>
-      <div>{logosFormatted}</div>
+      <h1>Museum of Logos</h1>
+
+      <div>
+        <h2>Decades</h2>
+        <h3>80's</h3>
+        {logosFormatted}
+        <h3>90's</h3>
+        {logosFormatted}
+        <h3>00's</h3>
+        {logosFormatted}
+      </div>
     </div>
   );
 }
-
 
 export default Library;

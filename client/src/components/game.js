@@ -1,10 +1,11 @@
-import LogoRender from "./logoRen";
+import {LogoRender} from "./logoRen";
 import Board from "./board";
+import {decadeSwitch} from "./logoRen";
 
 function Game() {
   return (
 
-    <div className="App">
+    <div>
       <div>
         <LogoRender />
       </div>
@@ -15,6 +16,7 @@ function Game() {
       <div>
         <h2>keyboard section</h2>
       </div>
+      <button onClick={decadeSwitch}>Decade Switch</button>
 
     </div>
   );
