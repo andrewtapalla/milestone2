@@ -8,12 +8,12 @@ function Library() {
       .then((data) => {
         setData(data);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log("warn error");
       });
   }, []);
 
-  let logosFormatted = data.map((logo) => {
+  let logosFormatted = data.map(logo => {
     return (
       <div key={logo.company}>
         <li>{logo.company}</li>

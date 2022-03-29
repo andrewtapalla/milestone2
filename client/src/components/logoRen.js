@@ -34,7 +34,7 @@ function Box() {
     myMesh.current.rotation.y = clock.getElapsedTime();
   });
   const myMesh = React.useRef();
-  const texture = useLoader(TextureLoader, test);
+  const texture = useLoader(TextureLoader, 'https://logogame.s3.us-west-1.amazonaws.com/80sTacoBell.png');
 
   return (
     <mesh ref={myMesh} rotation={[0, 0, 0]}>

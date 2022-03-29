@@ -4,15 +4,13 @@ import {decadeSwitch} from "./logoRen";
 
 function Game() {
   return (
-
     <div>
       <div>
         <LogoRender />
       </div>
       <h1>Guess that logo</h1>
-        <Board />
-      <div id="answer">
-      </div>
+      <Board />
+      <div id="answer"></div>
       <div>
         <h2>keyboard section</h2>
       </div>

@@ -16,33 +16,38 @@ function App() {
 
   useEffect(() => {
     fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then(res => res.json())
+      .then(data => setData(data.message));
   }, []);
 
   return (
     <div className="App">
       <Container className="background">
-      <Nav className="justify-content-center" defaultActiveKey="/home" as="ul">
-        <Nav.Item as="li">
-          <Nav.Link href="/">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link href="/game">Game</Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link href="/library">Library</Nav.Link>
-        </Nav.Item>
-      </Nav>
+        <Nav
+          className="justify-content-center"
+          defaultActiveKey="/home"
+          as="ul"
+        >
+          <Nav.Item as="li">
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link href="/game">Game</Nav.Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link href="/library">Library</Nav.Link>
+          </Nav.Item>
+        </Nav>
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/library" element={<Library />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/game" element={<Game />} />
+            <Route path="/library" element={<Library />} />
+          </Routes>
+        </BrowserRouter>
+        <p>{data}</p>
       </Container>
     </div>
   );
