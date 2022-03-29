@@ -1,4 +1,4 @@
-const mongoose = requrie("mongoose");
+const mongoose = require("mongoose");
 
 const logoSchema = new mongoose.Schema({
   company: { type: String, required: true },
@@ -8,4 +8,4 @@ const logoSchema = new mongoose.Schema({
   hint: { type: String },
 });
 
-module.exports = mongoose.model("Logo", logoSchema);
+module.exports = mongoose.model("Logo", logoSchema, "adeez");

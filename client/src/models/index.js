@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const mongoose = require("mongoose");
 
 mongoose.connect(
@@ -9,4 +10,4 @@ mongoose.connect(
   }
 );
 
-module.exports.Logo = require("./logos.js");
+module.exports.Logo = require("./logos");

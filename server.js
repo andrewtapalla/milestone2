@@ -1,8 +1,12 @@
 require("dotenv").config();
+//Exoress Config
 const express = require("express");
+
 const app = express();
 
-const PORT = 3001;
+//Controllers
+const logoController = require("./client/src/controllers/logos");
+app.use("/library", logoController);
 
 app.get("/api", (req, res) => {
   res.json({
@@ -10,6 +14,7 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("yellow world on " + PORT);
+//Port Connections
+app.listen(process.env.PORT, () => {
+  console.log("yellow world on " + process.env.PORT);
 });
