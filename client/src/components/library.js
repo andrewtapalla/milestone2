@@ -24,7 +24,7 @@ function Library() {
   });
 
   return (
-    <div className="App" key={Library}>
+    <div key={Library}>
       <h1>hello world</h1>
       <h2>this is library</h2>
       <div>{logosFormatted}</div>
