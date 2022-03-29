@@ -29,20 +29,20 @@
 }
 
 canvas {
-  background-color: black;
-  margin-top: 2em;
-  height: 30em;
+  margin: auto;
+  height: 20em;
 }
 
 input {
-  width: 50%;
-  height: 100px;
-  padding: 20px;
+  margin: auto;
+  height: 2em;
+  width: 60%;
   font-size: 20px;
   border: 1px solid black;
   box-sizing: border-box;
 }
 
 .simple-keyboard {
-  max-width: 850px;
+  margin: auto;
+  max-width: 80%;
 }
