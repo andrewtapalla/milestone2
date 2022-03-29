@@ -1,6 +1,6 @@
 function Game() {
   return (
-    <div className="App">
+    <div>
       <canvas></canvas>
       <h1>hello world</h1>
       <h2>this is game</h2>
