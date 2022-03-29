@@ -1,18 +1,18 @@
 const router = require("express").Router();
-const LogoModel = require("../models/logos");
+const db = require("../models");
 
 //Show
 
-router.get("/logos", (req, res) => {
-  LogoModel.find({}, (err, result) => {
-    if (err) {
+router.get("/", (req, res) => {
+  db.Logo.find()
+    .then((logos) => {
+      console.log(logos);
+      res.json(logos);
+    })
+    .catch((err) => {
       console.log(err);
       res.send({ message: "error404" });
-    } else {
-      console.log(result);
-      res.json(result);
-    }
-  });
+    });
 });
 
 module.exports = router;

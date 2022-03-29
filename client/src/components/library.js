@@ -1,27 +1,33 @@
 import { useEffect, useState } from "react";
 
 function Library() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/library/logos")
+    console.log("hi");
+    fetch("/library")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      })
+      .catch((err) => {
+        console.log("warn error");
+      });
   }, []);
-  console.log(data);
 
-/*   let logosFormatted = data.adeez.map((logo) => {
+  let logosFormatted = data.map((logo) => {
     return (
       <div>
-        <h3>{logo.company}</h3>
+        <li key={logo.id}>{logo.company}</li>
       </div>
     );
-  }); */
+  });
 
   return (
-    <div className="App">
+    <div className="App" key={Library}>
       <h1>hello world</h1>
       <h2>this is library</h2>
-      <div></div>
+      <div>{logosFormatted}</div>
     </div>
   );
 }
