@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
 
-const logoSchema = new mongoose.Schema({
-  company: { type: String, required: true },
+const LogoSchema = new mongoose.Schema({
+  company: {
+    type: String,
+    required: true,
+  },
   url: {
     type: String,
   },
-  hint: { type: String },
+  hint: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model("Logo", logoSchema);
+const LogoModel = mongoose.model("Logo", LogoSchema);
+module.exports = LogoModel
