@@ -19,7 +19,6 @@ let test = params[Math.floor(Math.random() * params.length)];
 
 //Decade Switch button
 export function decadeSwitch() {
-
   //---this block of code was to update test var to new value---
   // test = params[Math.floor(Math.random() * params.length)];
   // counter += 1;
@@ -34,7 +33,10 @@ function Box() {
     myMesh.current.rotation.y = clock.getElapsedTime();
   });
   const myMesh = React.useRef();
-  const texture = useLoader(TextureLoader, 'https://logogame.s3.us-west-1.amazonaws.com/80sTacoBell.png');
+  const texture = useLoader(
+    TextureLoader,
+    params[Math.floor(Math.random() * params.length)]
+  );
 
   return (
     <mesh ref={myMesh} rotation={[0, 0, 0]}>
