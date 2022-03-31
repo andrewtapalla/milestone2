@@ -7,7 +7,7 @@ function Board() {
     fetch("/library")
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        console.log(data.company);
         setData(data);
       })
       .catch(err => {
@@ -16,13 +16,7 @@ function Board() {
   }, []);
 
   let wordGuess = data.map((logo, index) => {
-    return (
-      <div key={logo.company}>
-        <li>{logo.company}</li>
-        <li>{logo.hint}</li>
-        <br />
-      </div>
-    );
+    return logo.company, logo.hint;
   });
 
   return (

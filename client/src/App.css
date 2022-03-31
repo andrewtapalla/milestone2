@@ -1,3 +1,7 @@
+body {
+  background-image: url("../public/images/background.jpg");
+}
+
 .App {
   text-align: center;
   color: white;
@@ -31,21 +35,35 @@ body {
   padding: 5px;
 }
 
+
+input {
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 canvas {
   margin: auto;
   height: 20em;
 }
 
-input {
-  margin: auto;
-  height: 2em;
-  width: 60%;
-  font-size: 20px;
-  border: 1px solid black;
-  box-sizing: border-box;
+.simple-keyboard.hg-theme-default.myTheme {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: transparent;
+}
+.simple-keyboard.hg-theme-default.myTheme .hg-button {
+  background-color: #606060;
+  border: none;
+  color: #fff;
 }
 
-.simple-keyboard {
-  margin: auto;
-  max-width: 80%;
+
+.simple-keyboard.hg-theme-default.myTheme,
+.Board {
+  margin: 0 auto;
+
 }
