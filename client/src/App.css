@@ -2,11 +2,14 @@
   text-align: center;
   color: white;
   background-size: cover;
-  background-image: url("../public/images/background.jpg");
   background-repeat: no-repeat;
   position: relative;
   height: 100vh;
   width: auto;
+}
+
+body {
+  background-image: url("../public/images/background.jpg");
 }
 
 .nav-link {
@@ -27,7 +30,6 @@
 .li {
   padding: 5px;
 }
-
 
 canvas {
   margin: auto;
