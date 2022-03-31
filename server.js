@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 //Controllers
 const logoController = require("./client/src/controllers/logos");
