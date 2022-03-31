@@ -35,7 +35,7 @@ function App() {
             <Nav.Link href="/game">Game</Nav.Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link href="/library">Library</Nav.Link>
+            <Nav.Link href="/museum">Museum</Nav.Link>
           </Nav.Item>
         </Nav>
 
@@ -44,10 +44,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/game" element={<Game />} />
-            <Route path="/library" element={<Library />} />
+            <Route path="/museum" element={<Library />} />
           </Routes>
         </BrowserRouter>
-        <p>{data}</p>
       </Container>
     </div>
   );
