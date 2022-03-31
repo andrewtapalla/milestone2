@@ -40,7 +40,7 @@ function Box() {
 
   return (
     <mesh ref={myMesh} rotation={[0, 0, 0]}>
-      <boxBufferGeometry attach="geometry" args={[3, 3, 0.1]} />
+      <boxBufferGeometry attach="geometry" args={[5, 4, 0.1]} />
       <meshStandardMaterial map={texture} />
     </mesh>
   );
