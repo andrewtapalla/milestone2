@@ -1,22 +1,21 @@
-import { LogoRender } from "./logoRen";
-import Tile from "./tile";
-import { decadeSwitch, Randomizer } from "./randomizer";
+import {LogoRender} from "./logoRen";
+import Board from "./board";
+import {decadeSwitch} from "./logoRen";
 
 function Game() {
   return (
     <div>
-      <br />
       <div>
         <LogoRender />
       </div>
-      <br />
-      <button onClick={decadeSwitch}>Decade Switch</button>
-      <h1>Guess that logo!</h1>
-      <Tile />
+      <h1>Guess that logo</h1>
+      <Board />
       <div id="answer"></div>
       <div>
         <h2>keyboard section</h2>
       </div>
+      <button onClick={decadeSwitch}>Decade Switch</button>
+
     </div>
   );
 }
