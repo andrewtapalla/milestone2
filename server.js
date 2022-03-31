@@ -9,9 +9,7 @@ const logoController = require("./client/src/controllers/logos");
 app.use("/library", logoController);
 
 app.get("/api", (req, res) => {
-  res.json({
-    message: "Yellow world from server.js",
-  });
+  
 });
 
 //Port Connections
