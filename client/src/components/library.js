@@ -17,6 +17,7 @@ function Library() {
     return (
       <div key={logo.company}>
         <li>{logo.company}</li>
+        <img src={logo.url}></img>
       </div>
     );
   });
