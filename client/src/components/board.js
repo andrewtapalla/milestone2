@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export let sourcey;
+export let compAnswer;
 
 function Board() {
   const [data, setData] = useState([]);
@@ -16,7 +17,7 @@ function Board() {
   }, []);
 
   let wordGuess = data.map((logo, index) => {
-    return (sourcey = logo.url);
+    return (sourcey = logo.url), (compAnswer = logo.company);
   });
 
   return (

@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../App.css";
+import { compAnswer, sourcey } from "./board";
 
 export class KeyboardWindow extends Component {
   
@@ -11,17 +12,24 @@ export class KeyboardWindow extends Component {
     input: "",
   };
 
-  onChange = input => {
+  onChange = (input) => {
     this.setState({ input });
-
+    this.target = input;
   };
 
-  onKeyPress = button => {
-
+  onKeyPress = (button) => {
     /**
      * If you want to handle the shift and caps lock buttons
      */
     if (button === "{shift}" || button === "{lock}") this.handleShift();
+
+    if (button === "{enter}") {
+      if (this.target === compAnswer) {
+        console.log(this.target + " win");
+      } else {
+        console.log("LOSER");
+      }
+    }
   };
 
   handleShift = () => {
@@ -32,17 +40,17 @@ export class KeyboardWindow extends Component {
     });
   };
 
-  onChangeInput = event => {
+  onChangeInput = (event) => {
     const input = event.target.value;
     this.setState({ input });
     this.keyboard.setInput(input).toLowerCase();
   };
 
-  setActiveInput = inputName => {
+  setActiveInput = (inputName) => {
     this.setState(
       {
         inputName: inputName,
-        keyboardOpen: true
+        keyboardOpen: true,
       },
       () => {
         console.log("Active input", inputName);
@@ -52,7 +60,7 @@ export class KeyboardWindow extends Component {
 
   closeKeyboard = () => {
     this.setState({
-      keyboardOpen: false
+      keyboardOpen: false,
     });
   };
 
@@ -60,23 +68,22 @@ export class KeyboardWindow extends Component {
     return (
       <div>
         <input
-        onFocus={() => this.setActiveInput('')}
+          onFocus={() => this.setActiveInput("")}
           value={this.state.input}
           placeholder={"Guess here"}
           onChange={this.onChangeInput}
         />
         <Keyboard
-          keyboardRef={r => (this.keyboard = r)}
+          keyboardRef={(r) => (this.keyboard = r)}
           theme={"hg-theme-default hg-layout-default myTheme"}
           layoutName={this.state.layoutName}
           layout={{
             default: [
-              "replay",
-              "Q W E R T Y U I O P",
+              "Q W E R T Y U I O P replay",
               "A S D F G H J K L {enter}",
               "Z X C V B N M {backspace}",
-              "{space}"
-            ]
+              "{space}",
+            ],
           }}
           onChange={this.onChange}
           onKeyPress={this.onKeyPress}

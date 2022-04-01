@@ -64,7 +64,6 @@ router.get("/museum/90", (req, res) => {
       res.send({ message: "error404" });
     });
 });
-
 router.get("/museum/00", (req, res) => {
   db.Otz.find()
     .then((otz) => {
