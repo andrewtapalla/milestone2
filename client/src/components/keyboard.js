@@ -23,6 +23,10 @@ export class KeyboardWindow extends Component {
      */
     if (button === "{shift}" || button === "{lock}") this.handleShift();
 
+    if (button === "replay") {
+      window.location.reload(false);
+    }
+
     if (button === "{enter}") {
       if (this.target === compAnswer) {
         console.log(this.target + " win");
@@ -43,7 +47,7 @@ export class KeyboardWindow extends Component {
   onChangeInput = (event) => {
     const input = event.target.value;
     this.setState({ input });
-    this.keyboard.setInput(input).toLowerCase();
+    this.keyboard.setInput(input);
   };
 
   setActiveInput = (inputName) => {
