@@ -7,16 +7,17 @@ function Game() {
   return (
     <div>
       <br />
+      <h4>Guess the logo:</h4>
+      <p>(Click and scroll on the logo to take a closer look)</p>
       <div>
         <LogoRender />
       </div>
       <br />
-      <button onClick={decadeSwitch}>Decade Switch</button>
-      <h1>Guess that logo</h1>
+      <button onClick={decadeSwitch} className="decadeBtn">Switch Decade</button>
+      <br />
       <Board />
       <div id="answer"></div>
       <div>
-        <h2>keyboard section</h2>
         <KeyboardWindow />
       </div>
 
