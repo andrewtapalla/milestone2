@@ -31,7 +31,7 @@ router.get("/museum", (req, res) => {
 router.get("/game", (req, res) => {
   db.Adeez.aggregate([{ $sample: { size: 1 } }])
     .then((gameLogo) => {
-      console.log(gameLogo);
+      console.log(gameLogo[0].company);
       res.json(gameLogo);
     })
     .catch((err) => {

@@ -4,7 +4,8 @@ import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "../App.css";
 
-export default class KeyboardWindow extends Component {
+export class KeyboardWindow extends Component {
+  
   state = {
     layoutName: "default",
     input: "",
@@ -12,11 +13,10 @@ export default class KeyboardWindow extends Component {
 
   onChange = input => {
     this.setState({ input });
-    console.log("Input changed", input);
+
   };
 
   onKeyPress = button => {
-    console.log("Button pressed", button);
 
     /**
      * If you want to handle the shift and caps lock buttons
@@ -35,7 +35,7 @@ export default class KeyboardWindow extends Component {
   onChangeInput = event => {
     const input = event.target.value;
     this.setState({ input });
-    this.keyboard.setInput(input);
+    this.keyboard.setInput(input).toLowerCase();
   };
 
   setActiveInput = inputName => {
@@ -71,6 +71,7 @@ export default class KeyboardWindow extends Component {
           layoutName={this.state.layoutName}
           layout={{
             default: [
+              "replay",
               "Q W E R T Y U I O P",
               "A S D F G H J K L {enter}",
               "Z X C V B N M {backspace}",

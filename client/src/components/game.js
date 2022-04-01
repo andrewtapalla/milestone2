@@ -1,6 +1,6 @@
 import {LogoRender} from "./logoRen";
 import Board from "./board";
-import KeyboardWindow from "./keyboard";
+import { KeyboardWindow } from "./keyboard";
 
 function Game() {
   return (
