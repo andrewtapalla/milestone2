@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function Library() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/library")
+    fetch("/library/museum")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -21,6 +21,8 @@ function Library() {
       </div>
     );
   });
+  
+  
 
   return (
     <div key={Library}>
