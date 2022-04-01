@@ -17,7 +17,7 @@ function Board() {
   }, []);
 
   let wordGuess = data.map((logo, index) => {
-    return (sourcey = logo.url), (compAnswer = logo.company);
+    return (sourcey = logo.url), (compAnswer = logo.company), logo.hint;
   });
 
   return (

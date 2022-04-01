@@ -22,6 +22,10 @@ export default class KeyboardWindow extends Component {
      */
     if (button === "{shift}" || button === "{lock}") this.handleShift();
 
+    if (button === "replay") {
+      window.location.reload(false);
+    }
+
     if (button === "{enter}") {
       if (this.target === compAnswer) {
         console.log(this.target + " win");

@@ -5,7 +5,6 @@ const db = require("../models");
 router.get("/", (req, res) => {
   db.Logo.find()
     .then((logos) => {
-      console.log(logos);
       res.json(logos);
     })
     .catch((err) => {
@@ -16,11 +15,9 @@ router.get("/", (req, res) => {
 
 //Game
 router.get("/game", (req, res) => {
-  db.Adeez.aggregate([{ $sample: { size: 1 } }])
-    .then((gameLogo) => {
-      console.log(gameLogo[0].company);
-
-      res.json(gameLogo);
+  db.GameScheme.aggregate([{ $sample: { size: 1 } }])
+    .then((game) => {
+      res.json(game);
     })
     .catch((err) => {
       console.log(err);
@@ -32,7 +29,6 @@ router.get("/game", (req, res) => {
 router.get("/museum/80", (req, res) => {
   db.Adeez.find()
     .then((adeez) => {
-      console.log(adeez);
       res.json(adeez);
     })
     .catch((err) => {
@@ -44,7 +40,6 @@ router.get("/museum/80", (req, res) => {
 router.get("/museum/90", (req, res) => {
   db.Ninedeez.find()
     .then((nindee) => {
-      console.log(nindee);
       res.json(nindee);
     })
     .catch((err) => {
@@ -55,7 +50,6 @@ router.get("/museum/90", (req, res) => {
 router.get("/museum/00", (req, res) => {
   db.Otz.find()
     .then((otz) => {
-      console.log(otz);
       res.json(otz);
     })
     .catch((err) => {
