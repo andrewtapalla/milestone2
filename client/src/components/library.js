@@ -1,39 +1,34 @@
 import { useEffect, useState } from "react";
 
+import Container from "react-bootstrap/Container";
+import AdeezCard from "./adeezCard";
+import NinedeezCard from "./ninedeeCard";
+import OtzCard from "./otzCard";
+
 function Library() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("/library")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch(err => {
-        console.log("warn error");
-      });
-  }, []);
-
-  let logosFormatted = data.map(logo => {
-    return (
-      <div key={logo.company}>
-        <li>{logo.company}</li>
-      </div>
-    );
-  });
-
   return (
     <div key={Library}>
-      <h1>Museum of Logos</h1>
-
-      <div>
-        <h2>Decades</h2>
-        <h3>80's</h3>
-        {logosFormatted}
-        <h3>90's</h3>
-        {logosFormatted}
-        <h3>00's</h3>
-        {logosFormatted}
-      </div>
+      <Container>
+        <br />
+        <h1>Museum of Logos</h1>
+        <br />
+        <div>
+          <h3>1980's</h3>
+          <div className="eighties">
+            <AdeezCard />
+          </div>
+          <br />
+          <h3>1990's</h3>
+          <div className="nineties">
+            <NinedeezCard />
+          </div>
+          <br />
+          <h3>2000's</h3>
+          <div className="millennials">
+            <OtzCard />
+          </div>
+        </div>
+      </Container>
     </div>
   );
 }

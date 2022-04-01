@@ -5,21 +5,7 @@ import { useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
-//Decade Switcher Logic
-let params = [
-  "https://logogame.s3.us-west-1.amazonaws.com/80sTacoBell.png",
-  "https://logogame.s3.us-west-1.amazonaws.com/80sPringles.png",
-  "https://logogame.s3.us-west-1.amazonaws.com/80sGatorade.png",
-  "https://logogame.s3.us-west-1.amazonaws.com/80sNBC.png",
-  "https://logogame.s3.us-west-1.amazonaws.com/80sDiscovery.png",
-];
-let test = params[Math.floor(Math.random() * params.length)];
-
-//Decade Switch button
-export function decadeSwitch() {
-  window.location.reload(false);
-}
+import { sourcey } from "./board";
 
 //React Element
 
@@ -28,15 +14,12 @@ function Box() {
     myMesh.current.rotation.y = clock.getElapsedTime();
   });
   const myMesh = React.useRef();
-  const texture = useLoader(
-    TextureLoader,
-    test
-  );
+  const texture = useLoader(TextureLoader, sourcey);
 
   return (
     <mesh ref={myMesh} rotation={[0, 0, 0]}>
       <boxBufferGeometry attach="geometry" args={[5, 4, 0.1]} />
-      <meshStandardMaterial map={texture} />
+      <meshStandardMaterial map={texture} transparent={true} opacity={1} />
     </mesh>
   );
 }

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const logoSchema = new mongoose.Schema({
+const adeezSchema = new mongoose.Schema({
   company: { type: String, required: true },
   url: {
     type: String,
@@ -9,5 +9,5 @@ const logoSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model("Logo", logoSchema, "adeez");
+module.exports = mongoose.model("Adeez", adeezSchema, "adeez");
 

@@ -10,4 +10,6 @@ mongoose.connect(
   }
 );
 
-module.exports.Logo = require("./logos");
+module.exports.Adeez = require("./adeez");
+module.exports.Ninedeez = require("./ninedeez");
+module.exports.Otz = require("./otz");
