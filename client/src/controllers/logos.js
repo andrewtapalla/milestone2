@@ -28,11 +28,35 @@ router.get("/game", (req, res) => {
 });
 
 //Museum
-router.get("/museum", (req, res) => {
+router.get("/museum/80", (req, res) => {
+  db.Adeez.find()
+    .then((adeez) => {
+      console.log(adeez);
+      res.json(adeez);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send({ message: "error404" });
+    });
+});
+
+router.get("/museum/90", (req, res) => {
   db.Ninedeez.find()
-    .then((museum) => {
-      console.log(museum);
-      res.json(museum);
+    .then((nindee) => {
+      console.log(nindee);
+      res.json(nindee);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send({ message: "error404" });
+    });
+});
+
+router.get("/museum/00", (req, res) => {
+  db.Otz.find()
+    .then((otz) => {
+      console.log(otz);
+      res.json(otz);
     })
     .catch((err) => {
       console.log(err);

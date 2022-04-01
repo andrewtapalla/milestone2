@@ -12,3 +12,4 @@ mongoose.connect(
 
 module.exports.Adeez = require("./adeez");
 module.exports.Ninedeez = require("./ninedeez");
+module.exports.Otz = require("./otz");
