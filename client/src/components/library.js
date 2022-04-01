@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import Container from 'react-bootstrap/Container'
+
+
 function Library() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -15,9 +18,14 @@ function Library() {
 
   let logosFormatted = data.map(logo => {
     return (
-      <div key={logo.company}>
-        <li>{logo.company}</li>
-        <img src={logo.url}></img>
+      <div className="cards">
+          <div key={logo.company} className="cardBody">
+          
+          <li className="cardTitle">{logo.company}</li>
+      
+          <img src={logo.url} className="cardImg"></img>
+
+        </div>
       </div>
     );
   });
@@ -26,17 +34,27 @@ function Library() {
 
   return (
     <div key={Library}>
+      <Container>
+      <br />
       <h1>Museum of Logos</h1>
-
+      <br />
       <div>
-        <h2>Decades</h2>
-        <h3>80's</h3>
-        {logosFormatted}
-        <h3>90's</h3>
-        {logosFormatted}
-        <h3>00's</h3>
-        {logosFormatted}
+          <h3>1980's</h3>
+          <div className="eighties">
+          {logosFormatted}
+          </div>
+          <br />
+          <h3>1990's</h3>
+          <div className="nineties">
+          {logosFormatted}
+          </div>
+          <br />
+          <h3>2000's</h3>
+          <div className="millennials">
+          {logosFormatted}
+          </div>
       </div>
+      </Container>
     </div>
   );
 }

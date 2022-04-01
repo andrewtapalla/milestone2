@@ -1,8 +1,9 @@
 body {
-  background-image: url("../public/images/background.jpg");
+  background-image: url("../public/images/steel.jpg");
 }
 
 .App {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: white;
   background-size: cover;
@@ -12,14 +13,10 @@ body {
   width: auto;
 }
 
-body {
-  background-image: url("../public/images/background.jpg");
-}
-
 .nav-link {
   text-decoration: none;
   border: black 1px solid;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   text-align: center;
   color: white !important;
   border-color: white;
@@ -33,6 +30,11 @@ body {
 
 .li {
   padding: 5px;
+}
+
+.nav {
+  border-bottom: solid 1px white;
+  padding-bottom: 6px;
 }
 
 
@@ -65,5 +67,47 @@ canvas {
 .simple-keyboard.hg-theme-default.myTheme,
 .Board {
   margin: 0 auto;
+  margin-top: 25px;
+}
 
+.decadeBtn {
+  color: black;
+  text-decoration: none;
+  padding: 7px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: solid 1px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: black 1px solid;
+}
+
+.decadeBtn:active {
+  background-color: gray;
+  transform: translateY(4px);
+}
+
+.cardBody {
+  border: solid 1px white;
+  display: inline-block;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.cardTitle {
+  list-style-type: none;
+}
+
+.cardImg {
+  width: 180px;
+  height: 220px;
+  padding-top: 10px;
+  background-color: white;
+  border-radius: 16px;
+}
+
+
+.cards {
+  display: inline-block;
+  padding: 11px;
 }

@@ -21,7 +21,6 @@ function Board() {
 
   return (
     <div id="board">
-      <h2>Board from board.js</h2>
       <ul>{wordGuess}</ul>
     </div>
   );

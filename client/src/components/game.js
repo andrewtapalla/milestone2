@@ -6,6 +6,8 @@ function Game() {
   return (
     <div>
       <br />
+      <h4>Guess the logo:</h4>
+      <p>(Click and scroll on the logo to take a closer look)</p>
       <div>
         <LogoRender />
       </div>
@@ -14,7 +16,6 @@ function Game() {
       <Board />
       <div id="answer"></div>
       <div>
-        <h2>keyboard section</h2>
         <KeyboardWindow />
       </div>
 

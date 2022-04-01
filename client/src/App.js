@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="background">
+      <Container>
         <Nav
           className="justify-content-center"
           defaultActiveKey="/home"
