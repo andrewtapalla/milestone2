@@ -31,7 +31,8 @@ router.get("/museum", (req, res) => {
 router.get("/game", (req, res) => {
   db.Adeez.aggregate([{ $sample: { size: 1 } }])
     .then((gameLogo) => {
-      console.log(gameLogo);
+      console.log(gameLogo[0].company);
+
       res.json(gameLogo);
     })
     .catch((err) => {
@@ -64,7 +65,6 @@ router.get("/museum/90", (req, res) => {
       res.send({ message: "error404" });
     });
 });
-
 router.get("/museum/00", (req, res) => {
   db.Otz.find()
     .then((otz) => {

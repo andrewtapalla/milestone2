@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const ninedeezSchema = new mongoose.Schema({
-  company: { type: String, required: true },
+  company: { type: String, uppercase: true },
   url: {
     type: String,
   },
