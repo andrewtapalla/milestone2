@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Game from "./game";
 
 function Board() {
   const [data, setData] = useState([]);
@@ -7,7 +6,6 @@ function Board() {
     fetch("/library")
       .then(res => res.json())
       .then(data => {
-        console.log(data.company);
         setData(data);
       })
       .catch(err => {
