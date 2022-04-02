@@ -71,7 +71,6 @@ export class KeyboardWindow extends Component {
   render() {
     return (
       <div>
-        <onWin />
         <input
           onFocus={() => this.setActiveInput("")}
           value={this.state.input}

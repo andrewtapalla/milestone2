@@ -17,7 +17,7 @@ function OtzCard() {
 
   let logosFormatted = data.map((logo) => {
     return (
-      <div className="cards">
+      <div className="cards" key={logo.company}>
         <div key={logo.company} className="cardBody">
           <li className="cardTitle">{logo.company}</li>
 
