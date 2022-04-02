@@ -6,21 +6,20 @@ function NinedeezCard() {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("/library/museum/90")
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         setData(data);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log("warn error");
       });
   }, []);
 
-  let logosFormatted = data.map((logo) => {
+  let logosFormatted = data.map(logo => {
     return (
-      <div className="cards">
+      <div className="cards" key={logo.company}>
         <div key={logo.company} className="cardBody">
           <li className="cardTitle">{logo.company}</li>
-
           <img src={logo.url} className="cardImg"></img>
         </div>
       </div>
