@@ -29,7 +29,7 @@ export class KeyboardWindow extends Component {
 
     if (button === "{enter}") {
       if (this.target === compAnswer) {
-        console.log(this.target + " win");
+        console.log(alert(this.target + " win"));
       } else {
         console.log("LOSER");
       }
@@ -71,6 +71,7 @@ export class KeyboardWindow extends Component {
   render() {
     return (
       <div>
+        <onWin />
         <input
           onFocus={() => this.setActiveInput("")}
           value={this.state.input}
@@ -97,4 +98,3 @@ export class KeyboardWindow extends Component {
   }
 }
 
-render(<KeyboardWindow />, document.getElementById("root"));
