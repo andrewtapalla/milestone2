@@ -3,6 +3,19 @@ const db = require("../models");
 
 //Museum
 router.get("/", (req, res) => {
+  db.Logo.aggregate([{ $sample: { size: 1 } }])
+    .then(gameLogo => {
+      console.log(gameLogo);
+      res.json(gameLogo);
+    })
+    .catch(err => {
+      console.log(err);
+      res.send({ message: "error404" });
+    });
+});
+
+//Show
+router.get("/museum", (req, res) => {
   db.Logo.find()
     .then((logos) => {
       res.json(logos);

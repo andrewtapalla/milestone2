@@ -1,18 +1,18 @@
 import {LogoRender} from "./logoRen";
 import Board from "./board";
-import KeyboardWindow from "./keyboard";
+import { KeyboardWindow } from "./keyboard";
 
 function Game() {
   return (
     <div>
       <br />
-      <h4>Guess the logo:</h4>
+      <h3>Guess the logo:</h3>
       <p>(Click and scroll on the logo to take a closer look)</p>
       <div>
         <LogoRender />
       </div>
       <br />
-      <h1>Guess that logo</h1>
+      <h5>Here's a hint:</h5>
       <Board />
       <div id="answer"></div>
       <div>

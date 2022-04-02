@@ -5,7 +5,8 @@ import "react-simple-keyboard/build/css/index.css";
 import "../App.css";
 import { compAnswer, sourcey } from "./board";
 
-export default class KeyboardWindow extends Component {
+export class KeyboardWindow extends Component {
+  
   state = {
     layoutName: "default",
     input: "",
@@ -76,6 +77,7 @@ export default class KeyboardWindow extends Component {
           value={this.state.input}
           placeholder={"Guess here"}
           onChange={this.onChangeInput}
+          className="placeHolder"
         />
         <Keyboard
           keyboardRef={(r) => (this.keyboard = r)}
