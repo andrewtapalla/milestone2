@@ -29,7 +29,9 @@ export class KeyboardWindow extends Component {
 
     if (button === "{enter}") {
       if (this.target === compAnswer) {
+
         console.log(alert(this.target + " win"));
+
       } else {
         console.log("LOSER");
       }
@@ -76,6 +78,7 @@ export class KeyboardWindow extends Component {
           value={this.state.input}
           placeholder={"Guess here"}
           onChange={this.onChangeInput}
+          className="placeHolder"
         />
         <Keyboard
           keyboardRef={(r) => (this.keyboard = r)}

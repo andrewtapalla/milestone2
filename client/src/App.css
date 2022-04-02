@@ -22,6 +22,7 @@ body {
   border-color: white;
   margin: 5px;
   margin-top: 10px;
+  border-radius: 16px;
 }
 
 .nav-link:hover {
@@ -42,14 +43,20 @@ input {
   width: 80%;
   height: 40px;
   font-size: 20px;
-  border: none;
   box-sizing: border-box;
   text-align: center;
+  border-radius: 16px;
+  background-color: #606060;
+  border: black 1px solid;
 }
 
 canvas {
   margin: auto;
   height: 20em;
+}
+
+input::placeholder {
+  color: black;
 }
 
 .simple-keyboard.hg-theme-default.myTheme {
@@ -88,7 +95,7 @@ canvas {
 }
 
 .cardBody {
-  border: solid 1px white;
+  border: solid 1px #5f5f5f;
   display: inline-block;
   padding: 25px;
   border-radius: 16px;
@@ -102,7 +109,7 @@ canvas {
   width: 180px;
   height: 220px;
   padding-top: 10px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 16px;
 }
 
