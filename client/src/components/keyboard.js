@@ -28,6 +28,7 @@ export default class KeyboardWindow extends Component {
 
     if (button === "{enter}") {
       if (this.target === compAnswer) {
+
         console.log(this.target + " win");
       } else {
         console.log("LOSER");
