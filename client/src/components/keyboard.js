@@ -76,6 +76,7 @@ export class KeyboardWindow extends Component {
           value={this.state.input}
           placeholder={"Guess here"}
           onChange={this.onChangeInput}
+          className="placeHolder"
         />
         <Keyboard
           keyboardRef={(r) => (this.keyboard = r)}
