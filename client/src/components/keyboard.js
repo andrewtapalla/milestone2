@@ -30,7 +30,7 @@ export class KeyboardWindow extends Component {
       if (this.target === compAnswer) {
         console.log(alert("You are correct!"));
       } else {
-        console.log("LOSER");
+        console.log(alert("Incorrect. Keep that COMPANIES NAME OUT OF YOUR MOUTH"));
       }
     }
   };
