@@ -6,7 +6,6 @@ import "../App.css";
 import { compAnswer, sourcey } from "./board";
 
 export class KeyboardWindow extends Component {
-  
   state = {
     layoutName: "default",
     input: "",
@@ -29,9 +28,7 @@ export class KeyboardWindow extends Component {
 
     if (button === "{enter}") {
       if (this.target === compAnswer) {
-
-        console.log(alert(this.target + " win"));
-
+        console.log(alert("You are correct!"));
       } else {
         console.log("LOSER");
       }
@@ -99,4 +96,3 @@ export class KeyboardWindow extends Component {
     );
   }
 }
-
